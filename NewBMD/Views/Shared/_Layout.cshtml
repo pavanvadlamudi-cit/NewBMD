@@ -6,36 +6,136 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="header">
+        <!--start-container-->
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <!--start-top-header-->
+            <div class="main-header">
+
+                <div class="clearfix"></div>
+                <div class="top-header">
+                    <div class="logo">
+                        <a href="Default.aspx">
+                          
+                            <img src="~/Content/images/logo2.png" title="logo" />
+                        </a>
+                    </div>
+                    <div class="top-header-right">                        
+                        <div class="top-header-contact-account text-right">
+                            <div class="social">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/Bmdnotices/?fref=ts" target="_blank"><i class="facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/bmdnotices" target="_blank"><i class="twitter"></i></a></li>                                   
+                                    <li><a href="https://plus.google.com/+Bmdnotices/posts" target="_blank"><i class="google"></i></a></li>
+                                    <li><a href="http://www.linkedin.com/company/bmdnotices-com?trk=top_nav_home" target="_blank"><i class="linkdin"></i></a></li>
+                                </ul>
+                            </div>
+                            <div id="UserControlheader_topadd" class="topright-banner hidden-sm hidden-xs">
+                            </div>
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!--End-top-header-->
+                <!--start-main-header-->
+                <div class="navigation">
+                    <div class="container">
+                        <nav class="navbar navbar-inverse">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+
+                                <ul class="nav navbar-nav navbar-inverse">
+                                    <li id="home" class="active"><a href="Default.aspx">Home <span class="sr-only">(current)</span></a></li>
+                                    <li id="aboutbmd"><a href="aboutus.aspx">About BMD</a></li>
+                                    <li><a href="birthday-book/index.aspx">Birthday Book</a></li>
+                                    <li><a href="wedding-book/index.aspx">Wedding Book</a></li>
+                                    <li><a href="remembrance-garden-book/index.aspx">Remembrance Garden Book</a></li>                                    
+                                    <li id="contactus"><a href="contactus.aspx">Contact Us</a></li>
+                                </ul>
+
+                                <div class="clearfix"></div>
+                            </div>
+                           
+                        </nav>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+            <!--script-for-menu-->
+            <script>
+                $("span.menu").click(function () {
+                    $(".top-nav ul").slideToggle("slow", function () {
+                    });
+                });
+            </script>
+            <!-- script-for-menu -->
         </div>
+        <!--End MainHeader-->
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-3 ftr_navi ftr">
+                <h3>NAVIGATION</h3>
+                <ul>
+                    <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="aboutus.aspx">About BMD</a></li>
+                    <li><a href="terms-condition.aspx">Terms &amp; Conditions </a></li>
+
+                    
+                    <li><a href="cookies.aspx">Cookies Policy</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftr_navi ftr">
+                <h3>RESOURCES</h3>
+                <ul>
+                    <li><a href="history.aspx">History / Genealogy</a></li>
+                    <li><a href="links.aspx">Useful Links </a></li>
+                    <li><a href="birthday-book/index.aspx">Birthday Book</a></li>
+                    <li><a href="wedding-book/index.aspx">Wedding Book</a></li>                  
+                    <li><a href="remembrance-garden-book/index.aspx">Remembrance Garden Book</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-3 get_in_touch ftr">
+                <h3>GET IN TOUCH</h3>
+                <p><a href="mailto:admin@bmdnotices.com">admin@bmdnotices.com</a></p>
+                <p><a href="https://twitter.com/bmdnotices" target="_blank">t : @@bmdnotices</a></p>
+                <p><a href="https://www.facebook.com/Bmdnotices/?fref=ts" target="_blank">f : BMDnotices</a></p>
+                <p><a href="https://plus.google.com/+Bmdnotices/posts" target="_blank">g : BMDnotices.com</a></p>
+            </div>
+            <div class="col-md-3 ftr-logo">
+                <a href="Default.aspx">
+                    <img src="images/f-logo.png" alt="">
+                </a>
+                <p>
+                    © 2019 BMDnotices.com
+                    <br>
+                    Design by <a href="http://edesignguru.com/" target="_blank">edesignguru.com</a>
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+   
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

@@ -1,31 +1,101 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<form id="form1" runat="server">
+    <div class="image-slider">
+        <!-- Slideshow 1 -->
+        <!-- Slideshow 2 -->
+        <div class="banner-grids">
+            <div class="container">
+                <div class="banner-grid1" title="Happy newborn baby">
+                    <h3 title="Happy newborn baby"> </h3>
+                </div>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+                <div class="banner-grid2" title="Wedding couple sitting on a bench">
+                    <h3 title="Wedding couple sitting on a bench"> </h3>
+                </div>
+                <div class="banner-grid4" title="Remembrance Garden with graves and tombstones">
+                    <h3 title="Remembrance Garden with graves and tombstones"> </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End-image-slider-->
+    <!--start-content-->
+    <div class="recent">
+        <div class="container">
+            <!--<div class="recent-head">
+                <h3>Welcome to BMD Notices.com</h3>
+                <p>BMD Notices.com caters for people from birth to death and many aspects of life in-between.  On this page you can view the wide range of facilities for Announcements and Notices we provide. We thank you for visiting our site and we invite you to use it by posting one or more messages. </p>
+            </div>-->
+            <div class="charitys">
+                <div class="col-md-4 chrt_grid">
+                    <div class="chrty">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                        <h3><a href="birthday-book/index.aspx"><span>B</span>irth</a></h3>
+
+                        <p>
+                            BMDnotices <span><a href="birthday-book/index.aspx">Birthday Book</a> </span> has been created to welcome newborn
+                            children to the family and community and mark their entry to the world. Here you can create a
+                            <span><a href="birthday-book/index.aspx">Birthday Book Page</a></span> for your child, post New Baby Congratulations
+                            Cards to show your delight. The Page will be accessible to the child as a wonderful memory when he/she grows up.
+                        </p>
+
+                        <a class="btn btn-primary" href="birthday-book/index.aspx"> Birthday Book </a><br />&nbsp;
+                    </div>
+                </div>
+                <div class="col-md-4 chrt_grid middle">
+                    <div class="chrty chrty-mid ">
+                        <h3><a href="wedding-book/index.aspx"><span>M</span>arriage</a></h3>
+                        <p>
+                            BMDnotices <span><a href="wedding-book/index.aspx">Wedding Book</a></span> is a wonderful place to inform the world about
+                            your big day. By creating your  <span><a href="wedding-book/index.aspx">Wedding Day Page </a></span> you can put the day and venue of your wedding and let
+                            others post congratulations or Wedding Anniversary Cards to create a lovely memory for the years to come. You are
+                            welcome to post notes on your Wedding Anniversary too.
+                        </p>
+                        <a class="btn btn-primary" href="wedding-book/index.aspx"> Wedding Book</a><br />&nbsp;
+                    </div>
+                </div>
+                <div class="col-md-4 chrt_grid">
+                    <div class="chrty">
+                        <h3><a href="remembrance-garden-book/index.aspx"><span>D</span>eath</a></h3>
+                        <p>
+                            BMDnotices <span><a href="remembrance-garden-book/index.aspx">Remembrance Garden Book</a> </span> is an online headstone
+                            that keeps the memories of your loved ones alive. Here you can create a
+                            <span><a href="remembrance-garden-book/postremembrance.aspx">Memory Page</a>,</span> share your tribute or memories with others, post Sympathy or In Memoriam Cards. The Page will keep these memories alive and accessible to yourself and others to view for generations to come.
+                        </p>
+                        <a class="btn btn-primary btn-primary" href="remembrance-garden-book/index.aspx"> Remembrance Garden Book</a><br>&nbsp;
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <!---->
+    <div class="join">
+        <div class="container">
+            <div class="col-md-9 join-info">
+                <h3>When someone we love becomes a memory, it becomes a treasure.</h3>
+                <p>This Remembrance Garden Book has been created to keep the memories of our loved ones from oblivion.</p>
+            </div>
+            <div class="col-md-3 join-link">
+                <a href="remembrance-garden-book/index.aspx">View Now</a>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <!---->
+
+    <div id="bot" class="hidden-sm hidden-xs text-center" runat="server">
+
+
     </div>
-</div>
+    <br>&nbsp;
+    <UserControl:footer ID="footer" runat="server" />
+</form>
+<script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("home").className += "active";
+        }
+</script>
